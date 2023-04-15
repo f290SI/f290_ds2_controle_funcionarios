@@ -27,20 +27,7 @@ public class Main implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		List<Departamento> departamentos = repository.findAll();
-		System.out.println(departamentos);
-
-		Optional<Departamento> optDepartamento = repository.findById(2);
-
-		optDepartamento.ifPresent(System.out::println);
-
-		Departamento d1 = new Departamento("Jurídico");
-
-		repository.save(d1);
-
-		Gson gson = new GsonBuilder().setPrettyPrinting().create(); 
-		
-		System.out.println(gson.toJson(repository.findAll()));
+		//TODO: Testing features		
 	}
 
 }

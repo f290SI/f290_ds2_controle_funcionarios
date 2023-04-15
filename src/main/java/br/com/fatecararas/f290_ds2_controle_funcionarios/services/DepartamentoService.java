@@ -5,6 +5,7 @@ import java.util.Objects;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import br.com.fatecararas.f290_ds2_controle_funcionarios.domain.entities.Departamento;
@@ -17,7 +18,7 @@ public class DepartamentoService {
     private DepartamentoRepository repository;
 
     public List<Departamento> buscarTodos() {
-        return repository.findAll();
+        return repository.findAll(Sort.by(Sort.Direction.ASC, "descricao"));
     }
 
     public Departamento salvar(Departamento pDepartamento) {

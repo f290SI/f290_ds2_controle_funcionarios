@@ -12,7 +12,7 @@
 <body>
     <div class="container">
         <div class="row mx-auto">
-            <form th:action="${departamento.id == null} ? @{/departamentos/salvar} : @{/departamentos/atualizar}"  method="post" 
+            <form th:action="${departamento.id == null} ? @{/departamento/salvar} : @{/departamento/atualizar}"  method="post" 
                 th:object="${departamento}">
                 <div class="mb-3">
                     <label for="departamento">Categoria</label>

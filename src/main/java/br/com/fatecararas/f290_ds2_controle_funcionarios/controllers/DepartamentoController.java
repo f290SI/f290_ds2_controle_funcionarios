@@ -54,7 +54,7 @@ public class DepartamentoController {
         return "/cadastrar";
     }   
 
-    @DeleteMapping("/excluir/{id}")
+    @GetMapping("/excluir/{id}")
     public String excluir(@PathVariable("id") Integer id) {
         service.apagar(id);
         return "redirect:/departamento/todos";
