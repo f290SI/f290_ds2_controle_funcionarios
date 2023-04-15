@@ -13,16 +13,16 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
 import br.com.fatecararas.f290_ds2_controle_funcionarios.domain.entities.Departamento;
-import br.com.fatecararas.f290_ds2_controle_funcionarios.domain.repositories.DepartamentoRepository;
+import br.com.fatecararas.f290_ds2_controle_funcionarios.repositories.DepartamentoRepository;
 
 @SpringBootApplication
-public class F290Ds2ControleFuncionariosApplication implements CommandLineRunner {
+public class Main implements CommandLineRunner {
 
 	@Autowired
 	private DepartamentoRepository repository;
 
 	public static void main(String[] args) {
-		SpringApplication.run(F290Ds2ControleFuncionariosApplication.class, args);
+		SpringApplication.run(Main.class, args);
 	}
 
 	@Override

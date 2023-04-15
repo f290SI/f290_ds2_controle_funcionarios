@@ -1,4 +1,4 @@
-package br.com.fatecararas.f290_ds2_controle_funcionarios.domain.repositories;
+package br.com.fatecararas.f290_ds2_controle_funcionarios.repositories;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
