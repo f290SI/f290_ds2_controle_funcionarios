@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Departamentos</title>
+    <link th:rel="stylesheet" th:href="@{css/bootstrap.min.css}">
+</head>
+<body>
+    <header th:replace="fragmentos/cabecalho :: cabecalho">
+        <h1>HEADER</h1>
+    </header>
+    <main>
+        <section layout:fragment="corpo">
+            <div>CONTEÚDO PRINCIPAL DAS PÁGINAS</div>
+        </section>
+    </main>
+    <script th:src="@{js/bootstrap.min.js}"></script>
+</body>
+</html>
