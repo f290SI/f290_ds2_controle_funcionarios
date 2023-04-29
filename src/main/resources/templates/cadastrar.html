@@ -15,10 +15,10 @@
             <form th:action="${departamento.id == null} ? @{/departamento/salvar} : @{/departamento/atualizar}"  method="post" 
                 th:object="${departamento}">
                 <div class="mb-3">
-                    <label for="departamento">Categoria</label>
+                    <label for="departamento">Departamento</label>
                     <input type="text" class="form-control" 
                     id="departamento" th:field="*{descricao}" required>
-                    <div class="form-text">Registro de categoria</div>
+                    <div class="form-text">Registro de departamento</div>
                     <input type="hidden" id="id" th:field="*{id}">
                 </div>
                 <button type="submit" class="btn btn-primary">Salvar</button>
