@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" layout:decorate="~{layout}">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro Cargo</title>
+</head>
+
+<body>
+    <div class="container" layout:fragment="corpo">
+        <div class="row mx-auto">
+            <form th:action="${cargo.id == null} ? @{/cargo/salvar} : @{/cargo/atualizar}" method="post"
+                th:object="${cargo}">
+                <div class="mb-3">
+                    <label for="cargo">Cargo</label>
+                    <input type="text" class="form-control mb-3" id="cargo" th:field="*{descricao}" required>
+                    <input type="hidden" id="id" th:field="*{id}">
+
+                    <select class="form-select form-select-lg mb-3" 
+                        aria-label=".form-select-lg example" th:field="*{departamento}">
+                        <option th:each="d : ${departamentos}" 
+                            th:value="${d.id}" th:text="${d.descricao}">One</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary">Salvar</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

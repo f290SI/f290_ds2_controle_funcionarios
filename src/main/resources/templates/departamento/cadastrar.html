@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" layout:decorate="~{layout}">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro Departamento</title>
+</head>
+
+<body>
+    <div class="container" layout:fragment="corpo">
+        <div class="row mx-auto">
+            <form th:action="${departamento.id == null} ? @{/departamento/salvar} : @{/departamento/atualizar}"
+                method="post" th:object="${departamento}">
+                <div class="mb-3">
+                    <label for="departamento">Departamento</label>
+                    <input type="text" class="form-control" id="departamento" th:field="*{descricao}" required>
+                    <div class="form-text">Registro de departamento</div>
+                    <input type="hidden" id="id" th:field="*{id}">
+                </div>
+                <button type="submit" class="btn btn-primary">Salvar</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
