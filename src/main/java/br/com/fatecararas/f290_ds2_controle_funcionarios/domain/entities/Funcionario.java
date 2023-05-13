@@ -22,16 +22,15 @@ public class Funcionario {
     private String email;
 
     @ManyToOne
-    @JoinColumn(name = "departamento_id")
-    private Departamento departamento;
+    @JoinColumn(name = "cargo_id")
+    private Cargo cargo;
 
     public Funcionario() {
     }
 
-    public Funcionario(String nome, String email, Departamento departamento) {
+    public Funcionario(String nome, String email) {
         this.nome = nome;
         this.email = email;
-        this.departamento = departamento;
     }
 
     public Integer getId() {
@@ -58,17 +57,17 @@ public class Funcionario {
         this.email = email;
     }
 
-    public Departamento getDepartamento() {
-        return departamento;
-    }
-
-    public void setDepartamento(Departamento departamento) {
-        this.departamento = departamento;
-    }
-
     @Override
     public String toString() {
-        return "Funcionario [id=" + id + ", nome=" + nome + ", email=" + email + ", departamento=" + departamento + "]";
+        return "Funcionario [id=" + id + ", nome=" + nome + ", email=" + email + "]";
+    }
+
+    public Cargo getCargo() {
+        return cargo;
+    }
+
+    public void setCargo(Cargo cargo) {
+        this.cargo = cargo;
     }
     
 }

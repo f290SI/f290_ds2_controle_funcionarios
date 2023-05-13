@@ -28,17 +28,17 @@ public class Main implements CommandLineRunner {
 	public void run(String... args) throws Exception {
 		//TODO: Testing features	
 		
-		Departamento d1 = new Departamento("Design");
+		// Departamento d1 = new Departamento("Design");
 
-		Departamento depto = departamentoRepository.save(d1);
+		// Departamento depto = departamentoRepository.save(d1);
 
-		Funcionario f1 = new Funcionario("Camila", "camila@gmail.com", depto);
+		// Funcionario f1 = new Funcionario("Camila", "camila@gmail.com", depto);
 
-		funcionarioRepository.save(f1);
+		// funcionarioRepository.save(f1);
 
-		List<Funcionario> all = funcionarioRepository.findAll();
+		// List<Funcionario> all = funcionarioRepository.findAll();
 
-		System.out.println(all);
+		// System.out.println(all);
 		// Ultimo sabado de abril.
 		//Chamada: Bruna, Luis, Gabriel, Murilo, Camila, 
 	}

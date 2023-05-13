@@ -20,7 +20,7 @@ public class Departamento {
     private String descricao;
 
     @OneToMany(mappedBy = "departamento")
-    List<Funcionario> funcionarios = new ArrayList<>();
+    List<Cargo> cargos = new ArrayList<>();
 
     public Departamento() {
     }
@@ -45,16 +45,16 @@ public class Departamento {
         this.descricao = descricao;
     }
 
-    public List<Funcionario> getFuncionarios() {
-        return funcionarios;
-    }
-
-    public void setFuncionarios(List<Funcionario> funcionarios) {
-        this.funcionarios = funcionarios;
-    }
-
     @Override
     public String toString() {
         return "Departamento [id=" + id + ", descricao=" + descricao + "]";
+    }
+
+    public List<Cargo> getCargos() {
+        return cargos;
+    }
+
+    public void setCargos(List<Cargo> cargos) {
+        this.cargos = cargos;
     }
 }
